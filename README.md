@@ -10,6 +10,7 @@
 
 
 # 项目结构(只介绍下src下的了)
+```
 |-components 储存组件，一些早期的组件js和css分开了，比较尴尬
   |-fonts 一些markdown文件用到的字体，后续版本已经废弃
   |-icon-font 字体图标
@@ -21,7 +22,7 @@
   |-index.css 全局公用css
   |-router.js 路由配置
   |-index.js 入口js
-
+```
 # 数据
 所有数据来源为fastmock,代理也是代理到了fastmock的链接。
 
