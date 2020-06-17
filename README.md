@@ -3,10 +3,10 @@
 由于该项目是本人第一次使用`react`所建项目，所以有些地方代码不尽如人意，请自行斟酌使用
 
 # 网站效果
-[主页](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/1.png)
-[书籍](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/2.png)
-[行博](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/3.png)
-[简介](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/4.png)
+![主页](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/1.png)
+![书籍](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/2.png)
+![行博](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/3.png)
+![简介](https://github.com/leedalei/react-blog/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/4.png)
 
 
 # 项目结构(只介绍下src下的了)
