@@ -1,0 +1,74 @@
+@media screen and (max-width: 768px) {
+  .mplayer{
+    display: none !important;
+  }
+}
+.mplayer{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 0 0 5px 0 #c9c9c9;
+  border-radius: 4px;
+  background-color: #fff;
+  animation: zoomIn .5s ease;
+  &-screen{
+    color: #333;
+    background-color: #71dff2;
+    box-shadow: 0 0 10px 0 #28c1f0 inset;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 14px;
+    overflow: hidden;
+  }
+  &-song{
+    text-align: center;
+    white-space: nowrap;
+    &--playing{
+      animation: slide infinite linear 30s;
+    }
+  }
+  &-controll{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div{
+      cursor: pointer;
+    }
+  }
+  &-play,&-pause{
+    color: #666;
+    font-size: 22px !important;
+    &:hover{
+      color: #333;
+    }
+  }
+ 
+}
+@keyframes zoomIn{
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(0);
+  }
+}
+@keyframes slide{
+  0%{
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-100%);
+  }
+  75%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}

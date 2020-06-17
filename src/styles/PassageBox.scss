@@ -1,0 +1,109 @@
+// .article {
+//   &-enter-active {
+//     animation: slideLeft ease 1s alternate-reverse;
+//   }
+//   &-exit-active {
+//     animation: slideLeft ease 1s;
+//   }
+//   @keyframes slideLeft {
+//     from {
+//       opacity: 0;
+//       transform: translateX(-20px);
+//     }
+//     to {
+//       transform: translateX(0);
+//       opacity: 1;
+//     }
+//   }
+// }
+.psgbox {
+  &-item {
+    padding: 20px 10px;
+    border-bottom: 1px solid #b2bac226;
+    cursor: pointer;
+    transition:  all ease .3s;
+    &:hover {
+      background-color: #f7f7f7;
+    }
+
+    &--meta {
+      font-size: 14px;
+      color: rgb(178, 186, 194);
+      transform-origin: left center;
+      transform: scale(0.9);
+      span {
+        height: 20px;
+        line-height: 20px;
+        margin-right: 10px;
+        display: inline-block;
+        border-radius: 3px;
+        padding: 0 3px;
+        background-color: #ade5f7;
+        color: #fff;
+      }
+    }
+
+    &--title {
+      font-weight: 600;
+      line-height: 1.2;
+      color: #2e3135;
+      margin: 10px 0 15px;
+    }
+
+    &--action {
+      display: flex;
+      font-size: 14px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #edeeef;
+        padding: 3px;
+        color: #999;
+        width: 50px;
+      }
+      .iconfont {
+        margin-right: 5px;
+      }
+    }
+  }
+  .loadMore {
+    padding: 20px 0;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: #333;
+    }
+    .icon-loading {
+      display: inline-block;
+      line-height: 1;
+      animation: loading linear infinite 1s;
+      margin-right: 5px;
+    }
+  }
+  .finished {
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+    transition: all ease 0.3s;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}

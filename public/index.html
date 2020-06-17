@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>李雷的博客</title>
+    <meta name="keywords" content="李伟城的个人博客，李雷的个人博客，前端" />
+    <meta name="description" content="李雷的个人博客，一个专注于前端知识分享的个人网站。" />
+   
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" style="display:none"></div>
+    <div id="mp3"></div>
+    <div id="ie" style="display:none;text-align:center;color:#555;margin-top:100px">
+      <p style="font-size:24px">凶残提示！</p>
+      <p>您使用的浏览器十分老旧，换个新的吧，行吗？啊？行吗？</p>
+      <p>您可以使用
+        <a target="_blank" href="https://www.google.cn/chrome/">谷歌、</a>
+        <a target="_blank" href="http://www.firefox.com.cn/">火狐、</a>
+        <a target="_blank" href="https://ie.sogou.com/">搜狗、</a>
+        <a target="_blank" href="https://browser.360.cn/ee/">360、</a>
+        Edge等多种浏览器</p>
+      <p style="font-size:30px">但 永远也不是IE</p>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  <script>
+    function isIE() {
+      if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        console.log(111);
+        return true;
+      } else {
+        return false;
+      }
+    }
+    if(isIE()){
+      document.getElementById('ie').style.display = 'block';
+    }else{
+      document.getElementById('root').style.display = 'block';
+    }
+  </script>
+</html>

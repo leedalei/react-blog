@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+  .cntacme{
+    display: none !important;
+  }
+}
+.cntacme{
+  border: 1px solid #e5e5e5;
+  border-top: 2px solid #17aaee;
+  padding: 0 10px;
+  &-title{
+    padding: 10px 5px;
+    border-bottom: 1px solid #b2bac226;
+  }
+  &-content{
+    color: #666;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  &-item{
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    img{
+      width:100px;
+      height: 100px;
+    }
+  }
+}

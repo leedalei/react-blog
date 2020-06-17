@@ -1,0 +1,102 @@
+
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Noto Sans CJK SC", "Source Han Sans CN", "Helvetica Neue",
+    Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei",
+    "Microsoft Yahei", "宋体", sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+textarea,button,input{
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Noto Sans CJK SC", "Source Han Sans CN", "Helvetica Neue",
+    Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei",
+    "Microsoft Yahei", "宋体", sans-serif;
+}
+h1,h2,h3,h4,h5,p{
+  margin: 0;
+}
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    outline:  none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+
+.margin {
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.icon{
+  display: inline-block;
+  text-indent: -9999px;
+  background-position: center center;
+  background-size: 100% ;
+  background-repeat: no-repeat;
+}
+

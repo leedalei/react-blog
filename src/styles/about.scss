@@ -1,0 +1,87 @@
+@media screen and (max-width: 768px){
+  .me{
+    padding: 15px 15px 0;
+    &-left{
+      width: 100%;
+    }
+    .intro{
+      &-item{
+        font-size: 14px;
+      }
+    }
+  }
+  .order{
+    display: none;
+  }
+  .big{
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 769px){
+  .me{
+    width: 1000px;
+    padding: 20px 20px 0;
+    box-shadow: 0 2px 4px 0 #d9d9d9;
+    &-left{
+      width: 65%;
+    }
+    .intro{
+      &-item{
+        font-size: 18px;
+      }
+    }
+  }
+  .big{
+    font-size: 26px;
+  }
+}
+.me{
+  display: flex;
+  margin: 0 auto;
+  background-color: #fff;
+  .intro{
+    width: 100%;
+    color: #333;
+    &-item{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      border-bottom: 1px dashed #e5e5e5;
+      padding: 10px 0;
+    }
+  }
+  .poetry{
+    &-wrapper{
+      padding: 100px 0;
+      background:url('../img/flower.png') left bottom /50% no-repeat;
+    }
+    width: 200px;
+    margin-left: calc(100% - 180px);
+    font-family: 'KaiTi','STKaiti','STZhongsong','STXingkai'; 
+    color: #666;
+    &-sentence{
+      display: inline-block;
+      margin: 0 15px;
+      height: 220px;  
+      writing-mode: vertical-rl;
+      &:nth-child(2n+1){
+        margin-bottom: -30px;
+      }
+    }
+  }
+
+  .order{
+    flex: 1;
+    margin-left: 20px;
+  }
+  .big{
+    color: #333;
+  }
+  .small{
+    font-size: 13px;
+    color: #999;
+  }
+  .clickable{
+    cursor: pointer;
+  }
+}
