@@ -15,12 +15,11 @@ export default class MusicPlayer extends Component {
 
   componentWillMount() {
     this.getSongList();
-    
   }
 
   //获取歌单
   async getSongList() {
-    let res = await $_get('/api/getMusicsAll');
+    // let res = await $_get('/api/getMusicsAll');
     this.setState({
       songList: res.data
     })
@@ -97,7 +96,7 @@ export default class MusicPlayer extends Component {
             bottom: this.props.bottom
           }}>
           <div className="mplayer-screen">
-            <audio loop="loop" src={'/static/uploads/' + songList[currentPlayIdx].src} ref="player">
+            <audio loop="loop" src={ songList[currentPlayIdx].src} ref="player">
               您的浏览器不支持 audio 标签。
             </audio>
             <p className={["mplayer-song", isPlaying ? 'mplayer-song--playing' : ""].join(' ')}>

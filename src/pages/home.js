@@ -193,7 +193,6 @@ class Home extends Component {
                 loading={loading}
                 finished={finished}
               />
-              <p className="main-icp main-icp-left"><a href="http://beian.miit.gov.cn" target="_blank">粤ICP备20008695号</a></p>
             </div>
             <div className="main-right">
               <SearchBar handleSearch={this.setQuery.bind(this)} />
@@ -201,7 +200,6 @@ class Home extends Component {
               <Tags tagList={tagList} handleSearch={this.setTag.bind(this)} />
               <Archive handleSearch={this.setTime.bind(this)} />
               <ContactMe />
-              <p className="main-icp main-icp-right"><a href="http://beian.miit.gov.cn" target="_blank">粤ICP备20008695号</a></p>
             </div>
           </div>
         </CSSTransition>

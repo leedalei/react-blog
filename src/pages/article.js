@@ -19,8 +19,8 @@ export default class Test extends Component {
       alreadyLike: false,
       alreadyRead: false,
       menuList: [],
-      articleInfo: { tags: [], likeNum: 0 },
-      commentNum: 0,
+      articleInfo: { tags: [], likeNum: 0 ,commentNum: 0},
+      
     };
     let cb;
   }
@@ -55,13 +55,6 @@ export default class Test extends Component {
   //点赞文章
   async likeArticle() {
     Toast.success('点赞成功');
-  }
-
-  //获取评论总数从子组件
-  getCommnetCount(count) {
-    this.setState({
-      commentNum: count
-    })
   }
 
   //生成目录
@@ -230,19 +223,11 @@ export default class Test extends Component {
               })}
               <span>
                 发表时间:
-                {articleInfo.createTime
-                  ? articleInfo.createTime
-                    .replace("T", " ")
-                    .replace(/\:\d{2}\.\d{1,3}Z$/, " ")
-                  : ""}
+                {articleInfo.createTime}
               </span>
               <span>
                 最近更新:
-                {articleInfo.updateTime
-                  ? articleInfo.updateTime
-                    .replace("T", " ")
-                    .replace(/\.\d{1,3}Z$/, " ")
-                  : ""}
+                {articleInfo.updateTime}
               </span>
               <span>
                 阅读数:
@@ -271,7 +256,7 @@ export default class Test extends Component {
             </div>
             <div
               className="suspended-comment suspended-item"
-              badge={commentNum}
+              badge={articleInfo.commentNum}
               onClick={() => smoothScroll("comment")}
             >
               <i className="iconfont">&#xe6d7;</i>

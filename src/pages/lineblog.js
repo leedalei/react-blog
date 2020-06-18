@@ -13,7 +13,6 @@ class LineBlog extends Component {
     super(props);
     this.state = {
       show: false,
-      AlreadyLikeList: [],
       pageIndex: 1,
       pageSize: 10,
       loading: false,
@@ -25,18 +24,6 @@ class LineBlog extends Component {
       show: true
     });
     if(this.props.lineblogList.length==0){this.getLineblogs();}
-    //储存已点赞列表
-    let reg = /#(\d+)_lblike;/g;
-    let arr = [];
-    if(localStorage.info!=undefined||localStorage.info!=null){
-      localStorage.info.replace(reg, (mt, $1) => {
-        arr.push($1 - 0);
-        return mt;
-      });
-      this.setState({
-        AlreadyLikeList: arr
-      });
-    }
   }
   async getLineblogs(isPush = false) {
     try {
@@ -44,8 +31,7 @@ class LineBlog extends Component {
       this.setState({ loading: true });
       let res = await $_get("/api/getLineblogs", {
         pageIndex,
-        pageSize,
-        status: true
+        pageSize
       });
       if (isPush) {
         lineblogList = lineblogList.concat(res.data.tableData);
@@ -72,20 +58,7 @@ class LineBlog extends Component {
 
   //点赞行博
   async likeLineblog(id) {
-    try {
-      await $_post("/api/likeLineblog", { id });
-      this.setState({
-        AlreadyLikeList: this.state.AlreadyLikeList.concat([id])
-      });
-      localStorage.info =
-        localStorage.info == undefined
-          ? `#${id}_lblike;`
-          : localStorage.info + `#${id}_lblike;`;
-
-      this.getLineblogs();
-    } catch (err) {
-      Toast.error(err.msg ? err.msg : err);
-    }
+    Toast.error('点赞成功');
   }
 
   //月份数字转换成大写
@@ -169,18 +142,10 @@ class LineBlog extends Component {
                   <div className="lineblog-item-content">
                     <p className="lineblog-item-text">{item.contents}</p>
                     <p className="lineblog-item-options">
-                      {/* <span>阅读({item.readNum||0})</span> */}
-                      {this.state.AlreadyLikeList.indexOf(item.id) > -1 ? (
-                        <span style={{ color: "#15b7ec" }}>
-                          <i className="iconfont">&#xe6ca;</i>(
-                          {item.likeNum || 0})
-                        </span>
-                      ) : (
                         <span onClick={this.likeLineblog.bind(this, item.id)}>
-                          <i className="iconfont icon-like">&#xe6c9;</i>(
+                          <i className="iconfont icon-like">&#xe6c9;</i>
                           {item.likeNum || 0})
                         </span>
-                      )}
                     </p>
                   </div>
                 </li>
