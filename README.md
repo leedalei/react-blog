@@ -40,7 +40,7 @@ src
   ```
 2. 开发环境启动
   ```
-  npm run dev
+  npm run start
   ```
 3. 打包
   ```
