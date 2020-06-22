@@ -36,7 +36,7 @@ export default class Book extends Component {
                 style={{ transform: `rotateY(${interpolatingStyle.deg}deg)` }}
               >
                 <div className="book-pic">
-                  <img draggable="false" src={`/static/uploads/${this.props.src}`} alt="书籍封面" />
+                  <img draggable="false" src={this.props.src} alt="书籍封面" />
                 </div>
                 <p className="book-title ellipsis">{this.props.name}</p>
                 <p className="book-author ellipsis">{this.props.author}</p>

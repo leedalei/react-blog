@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Comment.scss";
-import { $_get, $_post } from "../http";
+import { $_get } from "../http";
 import Toast from "./Toast/index";
 import QueueAnim from "rc-queue-anim";
 
@@ -21,7 +21,7 @@ export default class Comment extends Component {
   componentWillMount() {
     this.setState({
       lastCommentTimeStamp:
-        localStorage.lastCommentTimeStamp == undefined
+        localStorage.lastCommentTimeStamp === undefined
           ? 0
           : Number(localStorage.lastCommentTimeStamp)
     });
@@ -99,6 +99,7 @@ export default class Comment extends Component {
         );
         break;
       }
+      default:{}
     }
   }
 
@@ -119,8 +120,7 @@ export default class Comment extends Component {
       isReplying,
       replyObj,
       commentText,
-      commentList,
-      showDialog
+      commentList
     } = this.state;
     return (
       <div>

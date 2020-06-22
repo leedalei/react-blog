@@ -184,7 +184,7 @@ export default class Test extends Component {
     //由于节流的关系，sTop的值可能是旧值，导致后面的判断不准确
     let sTop = document.documentElement.scrollTop || document.body.srcollTop;
     for (let i = 0; i < menuList.length; i++) {
-      if (i == menuList.length - 1) {
+      if (i === menuList.length - 1) {
         //先判断是不是最后一个
         if (sTop >= menuList[i].offsetH) {
           menuList[i]["highlight"] = true;
@@ -207,7 +207,7 @@ export default class Test extends Component {
 
 
   render() {
-    let { articleInfo, alreadyLike, commentNum } = this.state;
+    let { articleInfo, alreadyLike } = this.state;
     return (
       <div className="article-wrap">
         <div className="article">

@@ -10,7 +10,7 @@ class HeadingBlock extends PureComponent {
       const nodeValue = children[0].props.value;
       return (
         <Heading level={`h${level}`} id={nodeValue} >
-          <a href={`#${nodeValue}`} className="link" style={{color:'inherit',textDecoration:'none'}}>
+          <a href={`#${nodeValue}`} className="link" style={{color:inherit,textDecoration:'none'}}>
             <span className="title">{children}</span>
           </a> 
         </Heading>

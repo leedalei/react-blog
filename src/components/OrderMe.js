@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../styles/OrderMe.scss";
 import "../components/OrderDialog/index";
-import { $_get, $_post } from "../http";
+import { $_get} from "../http";
 import OrderDialog from "../components/OrderDialog/index";
 import Toast from "./Toast/index";
 import { connect } from "react-redux";

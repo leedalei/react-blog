@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Animate from "rc-animate";
 
 class ToastBox extends Component {
   constructor() {
@@ -69,11 +68,6 @@ class ToastBox extends Component {
 
   render() {
     const { notices } = this.state;
-    const icons = {
-      info: "toast--info",
-      success: "toast--success",
-      error: "toast--error"
-    };
     return (
       <div className="toast">
         {notices.map(notice => (

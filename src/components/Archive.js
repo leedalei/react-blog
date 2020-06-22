@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Archive.scss";
-import { $_get, $_post } from "../http";
+import { $_get } from "../http";
 import QueueAnim from "rc-queue-anim";
 import{setArchiveList} from "../store/action"
 import { connect } from "react-redux";
@@ -13,7 +13,7 @@ class Archive extends Component {
     };
   }
   componentDidMount() {
-    if(this.props.archiveList.length==0){this.getArticlesCountByPeriod();}
+    if(this.props.archiveList.length===0){this.getArticlesCountByPeriod();}
   }
   //获取年度统计
   async getArticlesCountByPeriod() {
@@ -33,9 +33,9 @@ class Archive extends Component {
       }
       case "prev": {
         currentYear -= 1;
-
         break;
       }
+      default:{}
     }
     this.setState(
       {
@@ -104,8 +104,8 @@ class Archive extends Component {
           ease={["easeOutQuart", "easeInOutQuart"]}
         >
           {archiveList.map(item => {
-            if (item.totalItems == 0) {
-              return;
+            if (item.totalItems === 0) {
+              return null;
             }
             return (
               <li

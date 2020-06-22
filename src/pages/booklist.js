@@ -7,7 +7,6 @@ import "../styles/animation.scss";
 import { $_get } from "../http";
 import {setBookList} from "../store/action"
 import { connect } from "react-redux";
-import defaultImg from '../img/default.png';
 
 class BookList extends Component {
   constructor(props) {
@@ -20,7 +19,7 @@ class BookList extends Component {
     this.setState({
       show:true
     })
-    if(this.props.bookList.length==0){this.getBookList();}
+    if(this.props.bookList.length===0){this.getBookList();}
   }
   componentWillUnmount(){
     this.setState({
@@ -46,7 +45,7 @@ class BookList extends Component {
           return (
             <Book
               key={idx}
-              src={defaultImg}
+              src={require('../img/default.png')}
               name={value.name}
               author={value.author}
               evaluation={value.evaluation}
@@ -62,7 +61,7 @@ class BookList extends Component {
           return (
             <Book
               key={idx}
-              src={defaultImg}
+              src={require('../img/default.png')}
               name={value.name}
               author={value.author}
               evaluation={value.evaluation}

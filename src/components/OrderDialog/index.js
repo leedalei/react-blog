@@ -33,7 +33,7 @@ export default class OrderDialog extends Component {
       Toast.error("用户名为空或者长度大于30字符");
       return;
     } else if (
-      !/^([-_A-Za-z0-9\.]+)@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/.test(mail)
+      !/^([-_A-Za-z0-9.]+)@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/.test(mail)
     ) {
       Toast.error("邮箱格式不对");
       return;

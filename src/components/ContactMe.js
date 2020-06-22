@@ -2,9 +2,6 @@ import React,{Component} from 'react';
 import "../styles/ContactMe.scss";
 
 export default class ContactMe extends Component {
-  constructor(props){
-    super(props);
-  }
 
   render(){
     return (

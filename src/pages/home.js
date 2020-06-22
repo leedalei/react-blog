@@ -34,8 +34,8 @@ class Home extends Component {
     this.setState({
       show: true,
     });
-    if(this.props.articleList.length==0){this.getArticles();}
-    if(this.props.tagList.length==0){this.getTagsAll();}
+    if(this.props.articleList.length===0){this.getArticles();}
+    if(this.props.tagList.length===0){this.getTagsAll();}
   }
   //加载更多
   pullUpLoad() {

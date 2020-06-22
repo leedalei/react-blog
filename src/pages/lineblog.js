@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../styles/lineblog.scss";
-import { $_get, $_post } from "../http";
+import { $_get} from "../http";
 import Toast from "../components/Toast/index";
 import QueueAnim from "rc-queue-anim";
 import { CSSTransition } from "react-transition-group";
@@ -23,7 +23,7 @@ class LineBlog extends Component {
     this.setState({
       show: true
     });
-    if(this.props.lineblogList.length==0){this.getLineblogs();}
+    if(this.props.lineblogList.length===0){this.getLineblogs();}
   }
   async getLineblogs(isPush = false) {
     try {
@@ -65,7 +65,7 @@ class LineBlog extends Component {
   formatMonth(month){
     let arr = ['一','二','三','四','五','六','七','八','九','十','十一','十二'];
     for(let i=1;i<13;i++){
-      if(month==i){
+      if(month===i){
         return arr[i-1];
       }
     }
@@ -119,7 +119,7 @@ class LineBlog extends Component {
       >
         <div className="lineblog">
           <div className="lineblog-banner">
-            <img draggable="false" src={require('../img/line-blog-banner.gif')}></img>
+            <img draggable="false" src={require('../img/line-blog-banner.gif')} alt="行博大图"></img>
           </div>
           <p className="lineblog-slogen">有些话，不应该消散在风里</p>
           <QueueAnim
