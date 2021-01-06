@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "https://www.fastmock.site/mock/289936bb46c64d5e8ebf934af80ed934",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "bezier-easing": "^2.1.0",
     "cnpm": "^6.1.1",
